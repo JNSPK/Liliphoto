@@ -4,6 +4,7 @@ import { useUser } from '@supabase/auth-helpers-react';
 
 function Admin() {
   const user = useUser();
+  console.log(user);
 
   return (
     <div className='w-full h-full bg-background flex flex-col gap-4 justify-center items-center text-center'>

@@ -7,18 +7,19 @@ function Login() {
   const [email, setEmail] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [succesMessage, setSuccessMessage] = useState('');
-  console.log(email);
+
   const supabase = useSupabaseClient();
 
   async function magicLinkLogin() {
-    const { data, error } = await supabase.auth.signInWithOtp({
+    const { error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo:
-          'http://localhost:5173/Liliphoto/admin' ||
-          'https://jnspk.github.io/Liliphoto/admin',
+        emailRedirectTo: import.meta.env.PROD
+          ? import.meta.env.VITE_PROD_URL
+          : import.meta.env.VITE_DEV_URL,
       },
     });
+    console.log(import.meta.env.DEV);
 
     if (error) {
       console.error(error);
@@ -35,7 +36,6 @@ function Login() {
         'Consultez votre boîte mail afin de poursuivre la connexion'
       );
     }
-    console.log(data);
   }
 
   return (

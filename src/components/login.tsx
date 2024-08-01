@@ -14,7 +14,9 @@ function Login() {
     const { data, error } = await supabase.auth.signInWithOtp({
       email: email,
       options: {
-        emailRedirectTo: 'http://localhost:5173/Liliphoto/admin',
+        emailRedirectTo:
+          'http://localhost:5173/Liliphoto/admin' ||
+          'https://jnspk.github.io/Liliphoto/admin',
       },
     });
 

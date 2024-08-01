@@ -1,8 +1,7 @@
 import { SessionContextProvider } from '@supabase/auth-helpers-react';
 import { createClient } from '@supabase/supabase-js';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import Error404 from './pages/404';
@@ -13,30 +12,14 @@ const supabase = createClient(
   import.meta.env.VITE_KEY as string
 );
 
-const router = createBrowserRouter(
-  [
-    {
-      path: `/`,
-      element: <App />,
-    },
-    {
-      path: '/admin',
-      element: <Admin />,
-    },
-    {
-      path: '*',
-      element: <Error404 />,
-    },
-  ],
-  {
-    basename: '/Liliphoto/',
-  }
-);
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <SessionContextProvider supabaseClient={supabase}>
-      <RouterProvider router={router} />
-    </SessionContextProvider>
-  </React.StrictMode>
+  <SessionContextProvider supabaseClient={supabase}>
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='*' element={<Error404 />} />
+      </Routes>
+    </Router>
+  </SessionContextProvider>
 );

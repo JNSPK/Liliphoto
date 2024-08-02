@@ -19,6 +19,7 @@ function Login() {
           : import.meta.env.VITE_DEV_URL,
       },
     });
+    console.log(import.meta.env.DEV);
 
     if (error) {
       console.error(error);

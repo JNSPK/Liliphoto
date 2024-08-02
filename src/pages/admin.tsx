@@ -11,8 +11,10 @@ import { useNavigate } from 'react-router-dom';
 function Admin() {
   const { session, isLoading: isSessionLoading } = useSessionContext();
   const user = useUser();
+
   const navigate = useNavigate();
   const supabase = useSupabaseClient();
+
 
   useEffect(() => {
     // Extract the token from the URL hash

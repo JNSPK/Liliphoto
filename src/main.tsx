@@ -1,6 +1,7 @@
 import { SessionContextProvider } from '@supabase/auth-helpers-react';
 import { createClient } from '@supabase/supabase-js';
 import ReactDOM from 'react-dom/client';
+// import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import App from './App';
 import './index.css';
@@ -14,7 +15,7 @@ const supabase = createClient(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <SessionContextProvider supabaseClient={supabase}>
-    <Router>
+    <Router basename='/'>
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/admin' element={<Admin />} />

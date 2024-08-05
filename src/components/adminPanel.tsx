@@ -91,14 +91,20 @@ function AdminPanel() {
   return (
     <>
       <Header className='flex justify-between px-8'>
-        <h1 className='font-bold text-primary '>Interface d'administration</h1>
-        <Button className='text-accent-foreground ' onClick={signOut}>
+        <h1 className='font-bold text-primary-foreground '>
+          Interface d'administration
+        </h1>
+        <Button
+          variant='outline'
+          className='text-accent hover:border-transparent'
+          onClick={signOut}>
           Déconnexion
         </Button>
       </Header>
-      <div className='w-[80%] text-primary h-full flex flex-col gap-4 py-4'>
+      <div className='w-[80%] text-primary-foreground h-full flex flex-col gap-4 py-4'>
         <p>Selectionne une ou plusieurs photos</p>
         <Input
+          className='bg-white/20 backdrop-blur-sm border-none shadow-lg'
           type='file'
           accept='image/png, image/jpeg, image/jpg, image/raw'
           multiple

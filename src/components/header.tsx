@@ -8,7 +8,7 @@ interface HeaderProps {
 function Header({ children, className: className }: HeaderProps) {
   return (
     <header
-      className={`w-full h-[10%] max-h-20 border-b-2 border-primary sticky top-0 flex items-center ${className}`}>
+      className={`backdrop-blur-sm w-full min-h-[5rem] max-h-20 shadow-lg sticky top-0 flex items-center z-50 ${className}`}>
       {children}
     </header>
   );

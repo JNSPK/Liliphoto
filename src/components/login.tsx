@@ -39,21 +39,23 @@ function Login() {
   }
 
   return (
-    <div className='flex flex-col gap-4 w-1/2'>
-      <label className='self-start text-accent'>Email</label>
-      <hr></hr>
-      <Input
-        className='text-accent'
-        placeholder='Entrez votre email'
-        onChange={(e) => setEmail(e.target.value)}></Input>
-      {errorMessage && <div className='text-destructive'>{errorMessage}</div>}
-      {succesMessage && <div className='text-secondary'>{succesMessage}</div>}
-      <Button
-        variant='outline'
-        className='text-accent'
-        onClick={magicLinkLogin}>
-        Obtenir le Magic Link
-      </Button>
+    <div className='min-h-screen flex w-full justify-center items-center'>
+      <div className='flex flex-col gap-4 w-1/2'>
+        <label className='self-start text-accent-foreground'>Email</label>
+        <hr></hr>
+        <Input
+          className='text-accent-foreground'
+          placeholder='Entrez votre email'
+          onChange={(e) => setEmail(e.target.value)}></Input>
+        {errorMessage && <div className='text-destructive'>{errorMessage}</div>}
+        {succesMessage && <div className='text-secondary'>{succesMessage}</div>}
+        <Button
+          variant='outline'
+          className='text-accent-foreground'
+          onClick={magicLinkLogin}>
+          Obtenir le Magic Link
+        </Button>
+      </div>
     </div>
   );
 }

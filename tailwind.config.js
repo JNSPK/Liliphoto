@@ -72,6 +72,10 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      backgroundImage: {
+        card: "url('/src/assets/img/bg-purple.jpg')",
+        cardAlt: "url('/src/assets/img/generated_bg.png')",
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

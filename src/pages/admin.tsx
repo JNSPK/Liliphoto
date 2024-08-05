@@ -15,7 +15,6 @@ function Admin() {
   const navigate = useNavigate();
   const supabase = useSupabaseClient();
 
-
   useEffect(() => {
     // Extract the token from the URL hash
     const { access_token, refresh_token } = getHashParams();
@@ -49,8 +48,7 @@ function Admin() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className='w-full h-full bg-background flex flex-col gap-4 justify-center items-center text-center'>
-        <div className='w-1/2 flex gap-4 justify-center'></div>
+      <div className='w-full min-h-screen bg-card bg-cover flex flex-col gap-4 items-center text-center'>
         {user === null ? <Login /> : <AdminPanel />}
       </div>
     );

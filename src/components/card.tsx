@@ -7,14 +7,14 @@ interface CardProps {
 
 function Card(props: CardProps) {
   return (
-    <div className='border-solid border-2 border-primary h-80 overflow-hidden flex flex-col justify-between items-center'>
+    <div className='bg-opacity-5 h-80 overflow-hidden shadow-md flex flex-col justify-between items-center rounded-sm'>
       <div className='h-3/4 w-full'>
         <img
-          className='border-b-[1px] border-solid border-primary object-cover object-left-top h-full w-full'
+          className='shadow-white shadow-sm object-cover object-left-top h-full w-full'
           key={props.src}
           src={props.src}></img>
       </div>
-      <div className='w-full h-1/4 flex justify-center items-center'>
+      <div className='backdrop-blur-md w-full h-1/4 flex justify-center items-center'>
         <Button onClick={props.onClick} variant={'destructive'}>
           Supprimer
         </Button>

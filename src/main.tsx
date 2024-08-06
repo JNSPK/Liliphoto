@@ -3,9 +3,11 @@ import { createClient } from '@supabase/supabase-js';
 import ReactDOM from 'react-dom/client';
 // import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
-import App from './App';
+import Home from './Home';
+import AppHeader from './components/appHeader';
 import './index.css';
 import Error404 from './pages/404';
+import About from './pages/about';
 import Admin from './pages/admin';
 
 const supabase = createClient(
@@ -16,10 +18,12 @@ const supabase = createClient(
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <SessionContextProvider supabaseClient={supabase}>
     <Router basename='/'>
+      <AppHeader />
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route path='/' element={<Home />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='*' element={<Error404 />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </Router>
   </SessionContextProvider>

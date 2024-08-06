@@ -77,7 +77,7 @@ module.exports = {
       },
       backgroundImage: {
         card: "url('/src/assets/img/bg-purple.jpg')",
-        cardAlt: "url('/src/assets/img/generated_bg.png')",
+        header: "url('/src/assets/img/brushbg.jpg')",
       },
     },
   },

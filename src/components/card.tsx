@@ -10,7 +10,7 @@ function Card(props: CardProps) {
     <div className='bg-opacity-5 h-80 overflow-hidden shadow-md flex flex-col justify-between items-center rounded-sm'>
       <div className='h-3/4 w-full'>
         <img
-          className='shadow-white shadow-sm object-cover object-left-top h-full w-full'
+          className='shadow-sm object-cover object-left-top h-full w-full'
           key={props.src}
           src={props.src}></img>
       </div>

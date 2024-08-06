@@ -3,7 +3,7 @@ import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react';
 import { useCallback, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Card from './card';
-import Header from './header';
+import HeaderAdmin from './headerAdminPanel';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
@@ -90,7 +90,7 @@ function AdminPanel() {
 
   return (
     <>
-      <Header className='flex justify-between px-8'>
+      <HeaderAdmin className='flex justify-between px-8 min-h-[5rem]'>
         <h1 className='font-bold text-primary-foreground '>
           Interface d'administration
         </h1>
@@ -100,7 +100,7 @@ function AdminPanel() {
           onClick={signOut}>
           Déconnexion
         </Button>
-      </Header>
+      </HeaderAdmin>
       <div className='w-[80%] text-primary-foreground h-full flex flex-col gap-4 py-4'>
         <p>Selectionne une ou plusieurs photos</p>
         <Input

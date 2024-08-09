@@ -95,7 +95,7 @@ function AdminPanel() {
           Interface d'administration
         </h1>
         <Button
-          variant='outline'
+          variant='link'
           className='text-accent hover:border-transparent'
           onClick={signOut}>
           Déconnexion

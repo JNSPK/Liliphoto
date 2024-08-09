@@ -21,7 +21,9 @@ const supabase = createClient(
   import.meta.env.VITE_KEY as string
 );
 
-const basename = '/Liliphoto/';
+
+const basename = '/Liliphoto';
+
 
 const imageBg = [
   `${basename}/src/assets/img/Neck_Deep_32.jpg`,

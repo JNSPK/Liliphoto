@@ -21,15 +21,13 @@ const supabase = createClient(
   import.meta.env.VITE_KEY as string
 );
 
-
-const basename = '/Liliphoto';
-
+// const basename = '/Liliphoto';
 
 const imageBg = [
-  `${basename}/src/assets/img/Neck_Deep_32.jpg`,
-  `${basename}/src/assets/img/OLN_02.jpg`,
-  `${basename}/src/assets/img/Seaway_38.jpg`,
-  `${basename}/src/assets/img/All_Time_Low_46.jpg`,
+  `./src/assets/img/Neck_Deep_32.jpg`,
+  `./src/assets/img/OLN_02.jpg`,
+  `./src/assets/img/Seaway_38.jpg`,
+  `./src/assets/img/All_Time_Low_46.jpg`,
 ];
 
 function randomBg() {

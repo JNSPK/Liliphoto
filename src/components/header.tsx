@@ -21,7 +21,7 @@ function Header({ className: className }: HeaderProps) {
 
   return (
     <header
-      className={`font-medium backdrop-blur-sm bg-violet-500 bg-opacity-30 w-full max-h-20 shadow-lg sticky top-0 justify-between pl-4 md:px-8 min-h-12 z-[999] flex items-center ${className}`}>
+      className={`font-medium backdrop-blur-sm bg-violet-500 bg-opacity-30 w-full max-h-20 shadow-md sticky top-0 justify-between pl-4 md:px-8 min-h-12 z-[999] flex items-center ${className}`}>
       <p className='text-primary-foreground z-50'>Aly's Photography</p>
       <NavigationMenu className=''>
         <NavigationMenuList className='uppercase flex gap-0 md:gap-4 text-primary-foreground'>

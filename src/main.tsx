@@ -21,13 +21,12 @@ const supabase = createClient(
   import.meta.env.VITE_KEY as string
 );
 
-// const basename = '/Liliphoto';
+const basename = '/Liliphoto';
 
 const imageBg = [
-  `./src/assets/img/Neck_Deep_32.jpg`,
-  `./src/assets/img/OLN_02.jpg`,
-  `./src/assets/img/Seaway_38.jpg`,
-  `./src/assets/img/All_Time_Low_46.jpg`,
+  `${basename}/src/assets/img/Neck_Deep_32.jpg`,
+  `${basename}/src/assets/img/OLN_02.jpg`,
+  `${basename}/src/assets/img/Seaway_38.jpg`,
 ];
 
 function randomBg() {
@@ -48,7 +47,7 @@ export function Layout() {
           <Route path='/admin' element={<Admin />} />
           <Route path='*' element={<Error404 />} />
           <Route path='/about' element={<About />} />
-        </Routes>{' '}
+        </Routes>
       </div>
     </>
   );
@@ -56,7 +55,7 @@ export function Layout() {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <SessionContextProvider supabaseClient={supabase}>
-    <Router basename='/'>
+    <Router basename={'/'}>
       <Layout />
     </Router>
   </SessionContextProvider>

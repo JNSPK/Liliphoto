@@ -6,6 +6,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from './ui/navigation-menu';
+import logo from '/src/assets/img/logo.png';
 
 interface HeaderProps {
   children?: ReactNode;
@@ -22,8 +23,8 @@ function Header({ className: className }: HeaderProps) {
   return (
     <header
       className={`font-medium backdrop-blur-sm bg-violet-500 bg-opacity-30 w-full max-h-20 shadow-md sticky top-0 justify-between pl-4 md:px-8 min-h-12 z-[999] flex items-center ${className}`}>
-      <p className='text-primary-foreground z-50'>Aly's Photography</p>
-      <NavigationMenu className=''>
+      <img src={logo} className='max-h-[3rem] z-50 py-1'></img>
+      <NavigationMenu className='flex justify-between'>
         <NavigationMenuList className='uppercase flex gap-0 md:gap-4 text-primary-foreground'>
           <NavigationMenuItem>
             <Link

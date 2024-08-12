@@ -15,19 +15,16 @@ import './index.css';
 import Error404 from './pages/404';
 import About from './pages/about';
 import Admin from './pages/admin';
+import bg1 from '/src/assets/img/Neck_Deep_32.jpg';
+import bg2 from '/src/assets/img/OLN_02.jpg';
+import bg3 from '/src/assets/img/Seaway_38.jpg';
 
 const supabase = createClient(
   import.meta.env.VITE_API as string,
   import.meta.env.VITE_KEY as string
 );
 
-const basename = '/Liliphoto';
-
-const imageBg = [
-  `${basename}/src/assets/img/Neck_Deep_32.jpg`,
-  `${basename}/src/assets/img/OLN_02.jpg`,
-  `${basename}/src/assets/img/Seaway_38.jpg`,
-];
+const imageBg = [`${bg1}`, `${bg2}`, `${bg3}`];
 
 function randomBg() {
   const randomIndex = Math.floor(Math.random() * imageBg.length);

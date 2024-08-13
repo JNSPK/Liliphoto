@@ -1,7 +1,7 @@
 import { Button } from './ui/button';
 
 interface CardProps {
-  src: string;
+  src: string | undefined;
   onClick: () => Promise<void>;
 }
 

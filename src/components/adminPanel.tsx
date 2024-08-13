@@ -7,9 +7,11 @@ import HeaderAdmin from './headerAdminPanel';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
-interface Image {
+export interface Image {
   name: string;
   key?: string; // Pour d'autres propriétés éventuelles
+  id?: string;
+  url?: string;
 }
 function AdminPanel() {
   const supabase = useSupabaseClient();

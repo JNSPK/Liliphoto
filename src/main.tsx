@@ -1,7 +1,6 @@
 import { SessionContextProvider } from '@supabase/auth-helpers-react';
 import { createClient } from '@supabase/supabase-js';
 import ReactDOM from 'react-dom/client';
-// import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {
   Route,
   HashRouter as Router,
